@@ -1,0 +1,15 @@
+{
+  "mod": "cgtest",
+  "mappings": {
+    "cgtest:forest_like": [
+      "minecraft:forest"
+    ],
+    "cgtest:two_targets": [
+      "minecraft:plains",
+      "minecraft:forest"
+    ],
+    "cgtest:plain_value": [
+      "minecraft:meadow"
+    ]
+  }
+}

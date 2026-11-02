@@ -1,10 +1,12 @@
 package com.panda.commonground.gametest;
 
 import com.panda.commonground.CommonGround;
+import com.panda.commonground.Ground;
 import com.panda.commonground.Texts;
 import com.panda.commonground.platform.Services;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
 import java.util.function.Consumer;
 import java.util.regex.Pattern;
 import net.minecraft.core.Holder;
@@ -29,6 +31,9 @@ public final class GroundGameTests {
     static {
         FUNCTIONS.register("mod_loaded", () -> GroundGameTests::modLoaded);
         FUNCTIONS.register("lang_coverage", () -> GroundGameTests::langCoverage);
+        FillTests.add((name, test) -> FUNCTIONS.register(name, () -> test));
+        RepairTests.add((name, test) -> FUNCTIONS.register(name, () -> test));
+        FUNCTIONS.register("preset_applies_only_to_existing_biomes", () -> GroundGameTests::presetOnlyExisting);
     }
 
     private GroundGameTests() {}
@@ -57,6 +62,21 @@ public final class GroundGameTests {
         if (!CommonGround.initialised()) helper.fail("CommonGround.init() never ran");
         String loader = Services.PLATFORM.loaderName();
         if (!"neoforge".equals(loader)) helper.fail("the platform service is " + loader);
+        helper.succeed();
+    }
+
+    /**
+     * The shipped Terralith preset is loaded but maps nothing here (Terralith isn't installed), without a note; the
+     * test pack's preset maps its three biomes.
+     */
+    private static void presetOnlyExisting(GameTestHelper helper) {
+        var mapped = Ground.mappings().mapped();
+        if (!mapped.keySet().equals(Set.of("cgtest:forest_like", "cgtest:two_targets", "cgtest:plain_value"))) {
+            helper.fail("mapped " + mapped.keySet());
+        }
+        if (!mapped.get("cgtest:forest_like").origin().equals("preset cgtest:cgtest")) helper.fail("origin " + mapped.get("cgtest:forest_like"));
+        if (Ground.mappings().notes().stream().anyMatch(n -> n.startsWith("terralith:"))) helper.fail("notes " + Ground.mappings().notes());
+        if (!Ground.presetIds().contains("commonground:terralith")) helper.fail("presets loaded " + Ground.presetIds());
         helper.succeed();
     }
 

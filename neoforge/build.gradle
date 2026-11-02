@@ -65,6 +65,7 @@ loom {
             mainClass = "net.neoforged.fml.startup.GameTestServer"
             property "neoforge.enableGameTest", "true"
             property "neoforge.enabledGameTestNamespaces", "commonground"
+            property "commonground.testpack", "true"
         }
     }
 }
@@ -125,6 +126,7 @@ processResources {
 
 // the released jar: common and NeoForge classes together (nothing to remap since 26.1)
 shadowJar {
+    exclude "datapacks/**" // the test pack, for dev runs only
     exclude "fabric.mod.json"
     exclude "architectury.common.json"
     configurations = [project.configurations.shadowBundle]

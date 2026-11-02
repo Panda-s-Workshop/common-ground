@@ -74,6 +74,7 @@ processResources {
 
 // the released jar: common and Fabric classes together (nothing to remap since 26.1)
 shadowJar {
+    exclude "datapacks/**" // the test pack, for dev runs only
     exclude "architectury.common.json"
     configurations = [project.configurations.shadowBundle]
     archiveClassifier = "fabric"

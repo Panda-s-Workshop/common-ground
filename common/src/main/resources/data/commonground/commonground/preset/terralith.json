@@ -1,0 +1,295 @@
+{
+  "mod": "terralith",
+  "mappings": {
+    "terralith:alpha_islands": [
+      "minecraft:plains"
+    ],
+    "terralith:alpha_islands_winter": [
+      "minecraft:snowy_plains"
+    ],
+    "terralith:alpine_grove": [
+      "minecraft:grove"
+    ],
+    "terralith:alpine_highlands": [
+      "minecraft:meadow"
+    ],
+    "terralith:amethyst_canyon": [
+      "minecraft:jungle"
+    ],
+    "terralith:amethyst_rainforest": [
+      "minecraft:jungle"
+    ],
+    "terralith:ancient_sands": [
+      "minecraft:desert"
+    ],
+    "terralith:arid_highlands": [
+      "minecraft:savanna_plateau"
+    ],
+    "terralith:ashen_savanna": [
+      "minecraft:savanna_plateau"
+    ],
+    "terralith:basalt_cliffs": [
+      "minecraft:stony_peaks"
+    ],
+    "terralith:birch_taiga": [
+      "minecraft:birch_forest",
+      "minecraft:taiga"
+    ],
+    "terralith:blooming_plateau": [
+      "minecraft:meadow"
+    ],
+    "terralith:blooming_valley": [
+      "minecraft:flower_forest"
+    ],
+    "terralith:brushland": [
+      "minecraft:savanna"
+    ],
+    "terralith:bryce_canyon": [
+      "minecraft:badlands"
+    ],
+    "terralith:caldera": [
+      "minecraft:meadow"
+    ],
+    "terralith:cave/andesite_caves": [
+      "minecraft:dripstone_caves"
+    ],
+    "terralith:cave/deep_caves": [
+      "minecraft:dripstone_caves"
+    ],
+    "terralith:cave/diorite_caves": [
+      "minecraft:dripstone_caves"
+    ],
+    "terralith:cave/frostfire_caves": [
+      "minecraft:dripstone_caves"
+    ],
+    "terralith:cave/fungal_caves": [
+      "minecraft:lush_caves"
+    ],
+    "terralith:cave/granite_caves": [
+      "minecraft:dripstone_caves"
+    ],
+    "terralith:cave/infested_caves": [
+      "minecraft:dripstone_caves"
+    ],
+    "terralith:cave/mantle_caves": [
+      "minecraft:dripstone_caves"
+    ],
+    "terralith:cave/thermal_caves": [
+      "minecraft:dripstone_caves"
+    ],
+    "terralith:cave/tuff_caves": [
+      "minecraft:dripstone_caves"
+    ],
+    "terralith:cave/underground_jungle": [
+      "minecraft:lush_caves"
+    ],
+    "terralith:cloud_forest": [
+      "minecraft:flower_forest"
+    ],
+    "terralith:cold_shrubland": [
+      "minecraft:snowy_plains"
+    ],
+    "terralith:deep_warm_ocean": [
+      "minecraft:warm_ocean",
+      "minecraft:deep_lukewarm_ocean"
+    ],
+    "terralith:desert_canyon": [
+      "minecraft:desert"
+    ],
+    "terralith:desert_oasis": [
+      "minecraft:desert"
+    ],
+    "terralith:desert_spires": [
+      "minecraft:desert"
+    ],
+    "terralith:emerald_peaks": [
+      "minecraft:jagged_peaks"
+    ],
+    "terralith:forested_highlands": [
+      "minecraft:taiga"
+    ],
+    "terralith:fractured_savanna": [
+      "minecraft:windswept_savanna"
+    ],
+    "terralith:frozen_cliffs": [
+      "minecraft:snowy_slopes"
+    ],
+    "terralith:glacial_chasm": [
+      "minecraft:ice_spikes"
+    ],
+    "terralith:granite_cliffs": [
+      "minecraft:stony_peaks"
+    ],
+    "terralith:gravel_beach": [
+      "minecraft:stony_shore"
+    ],
+    "terralith:gravel_desert": [
+      "minecraft:snowy_plains"
+    ],
+    "terralith:haze_mountain": [
+      "minecraft:windswept_hills"
+    ],
+    "terralith:highlands": [
+      "minecraft:meadow"
+    ],
+    "terralith:hot_shrubland": [
+      "minecraft:savanna"
+    ],
+    "terralith:ice_marsh": [
+      "minecraft:swamp",
+      "minecraft:snowy_plains"
+    ],
+    "terralith:jungle_mountains": [
+      "minecraft:jungle"
+    ],
+    "terralith:lavender_forest": [
+      "minecraft:flower_forest"
+    ],
+    "terralith:lavender_valley": [
+      "minecraft:flower_forest"
+    ],
+    "terralith:lush_desert": [
+      "minecraft:desert"
+    ],
+    "terralith:lush_valley": [
+      "minecraft:meadow"
+    ],
+    "terralith:mirage_isles": [
+      "minecraft:mushroom_fields"
+    ],
+    "terralith:moonlight_grove": [
+      "minecraft:forest"
+    ],
+    "terralith:moonlight_valley": [
+      "minecraft:forest"
+    ],
+    "terralith:orchid_swamp": [
+      "minecraft:swamp"
+    ],
+    "terralith:painted_mountains": [
+      "minecraft:badlands"
+    ],
+    "terralith:red_oasis": [
+      "minecraft:badlands"
+    ],
+    "terralith:rocky_jungle": [
+      "minecraft:jungle"
+    ],
+    "terralith:rocky_mountains": [
+      "minecraft:jagged_peaks"
+    ],
+    "terralith:rocky_shrubland": [
+      "minecraft:snowy_plains"
+    ],
+    "terralith:sakura_grove": [
+      "minecraft:cherry_grove"
+    ],
+    "terralith:sakura_valley": [
+      "minecraft:cherry_grove"
+    ],
+    "terralith:sandstone_valley": [
+      "minecraft:desert"
+    ],
+    "terralith:savanna_badlands": [
+      "minecraft:savanna_plateau",
+      "minecraft:badlands"
+    ],
+    "terralith:savanna_slopes": [
+      "minecraft:savanna_plateau"
+    ],
+    "terralith:scarlet_mountains": [
+      "minecraft:jagged_peaks"
+    ],
+    "terralith:shield": [
+      "minecraft:old_growth_spruce_taiga"
+    ],
+    "terralith:shield_clearing": [
+      "minecraft:taiga"
+    ],
+    "terralith:shrubland": [
+      "minecraft:plains"
+    ],
+    "terralith:siberian_grove": [
+      "minecraft:grove"
+    ],
+    "terralith:siberian_taiga": [
+      "minecraft:snowy_taiga"
+    ],
+    "terralith:skylands_autumn": [
+      "minecraft:forest"
+    ],
+    "terralith:skylands_spring": [
+      "minecraft:flower_forest"
+    ],
+    "terralith:skylands_summer": [
+      "minecraft:plains"
+    ],
+    "terralith:skylands_winter": [
+      "minecraft:snowy_taiga"
+    ],
+    "terralith:snowy_badlands": [
+      "minecraft:badlands",
+      "minecraft:snowy_plains"
+    ],
+    "terralith:snowy_cherry_grove": [
+      "minecraft:cherry_grove"
+    ],
+    "terralith:snowy_maple_forest": [
+      "minecraft:grove"
+    ],
+    "terralith:snowy_shield": [
+      "minecraft:snowy_taiga"
+    ],
+    "terralith:steppe": [
+      "minecraft:plains"
+    ],
+    "terralith:stony_spires": [
+      "minecraft:windswept_hills"
+    ],
+    "terralith:temperate_highlands": [
+      "minecraft:forest"
+    ],
+    "terralith:tropical_jungle": [
+      "minecraft:jungle"
+    ],
+    "terralith:valley_clearing": [
+      "minecraft:plains"
+    ],
+    "terralith:volcanic_crater": [
+      "minecraft:stony_peaks"
+    ],
+    "terralith:volcanic_peaks": [
+      "minecraft:stony_peaks"
+    ],
+    "terralith:warm_river": [
+      "minecraft:river"
+    ],
+    "terralith:warped_mesa": [
+      "minecraft:badlands"
+    ],
+    "terralith:white_cliffs": [
+      "minecraft:windswept_hills"
+    ],
+    "terralith:white_mesa": [
+      "minecraft:badlands"
+    ],
+    "terralith:windswept_spires": [
+      "minecraft:windswept_hills"
+    ],
+    "terralith:wintry_forest": [
+      "minecraft:snowy_taiga"
+    ],
+    "terralith:wintry_lowlands": [
+      "minecraft:snowy_taiga"
+    ],
+    "terralith:yellowstone": [
+      "minecraft:taiga"
+    ],
+    "terralith:yosemite_cliffs": [
+      "minecraft:windswept_forest"
+    ],
+    "terralith:yosemite_lowlands": [
+      "minecraft:forest"
+    ]
+  }
+}
