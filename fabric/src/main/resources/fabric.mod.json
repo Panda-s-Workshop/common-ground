@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${version}",
+  "name": "${mod_name}",
+  "description": "${mod_description}",
+  "authors": [
+    "${mod_authors}"
+  ],
+  "contact": {
+    "homepage": "https://panda-s-workshop.github.io/common-ground/",
+    "sources": "https://github.com/Panda-s-Workshop/common-ground",
+    "issues": "https://github.com/Panda-s-Workshop/common-ground/issues"
+  },
+  "license": "${mod_license}",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.panda.commonground.fabric.CommonGroundFabric"
+    ],
+    "client": [
+      "com.panda.commonground.fabric.client.CommonGroundFabricClient"
+    ]
+  },
+  "accessWidener": "commonground.accesswidener",
+  "mixins": [
+    "commonground.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${fabric_loader_version}",
+    "fabric-api": ">=${fabric_api_min}",
+    "minecraft": "~${minecraft_version}",
+    "java": ">=25"
+  }
+}

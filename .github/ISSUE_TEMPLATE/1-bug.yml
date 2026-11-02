@@ -1,0 +1,104 @@
+name: 🐛 Bug report
+description: Something behaves wrong, without crashing.
+labels: ["type: bug", "status: needs triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! One problem per issue, please. For crashes use the **Crash report** form, and for problems that only happen together with another mod, **Conflict with another mod**. Questions go to [Discussions](https://github.com/Panda-s-Workshop/common-ground/discussions).
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What's wrong, and where. Screenshots help a lot.
+      placeholder: Mobs from my mob mod never spawn in Terralith's groves, though /commonground biome lists them.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: false
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: How to reproduce it
+      placeholder: |
+        1. Create a world with Common Ground and a biome mod
+        2. Stand in one of its biomes and run /commonground biome
+        3. The other mod's mob is listed but never spawns
+    validations:
+      required: false
+
+  - type: input
+    id: where
+    attributes:
+      label: Seed and coordinates
+      description: The world seed and the coordinates from F3, so the same spot can be found again.
+      placeholder: Seed 1111, in terralith:moonlight_grove at 2104 70 -880
+    validations:
+      required: false
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Mobs missing or too many in a biome
+        - A preset (a biome mod's mappings)
+        - Mapping lines and the config file
+        - The best guess for unmapped biomes
+        - Biome tags (variants, other mods' biome checks)
+        - The /commonground command and the start summary
+        - Something else
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Common Ground version
+      description: From the jar's name or the mods list, such as 0.1.0.
+      placeholder: 0.1.0
+    validations:
+      required: true
+
+  - type: input
+    id: neoforge
+    attributes:
+      label: NeoForge version
+      description: Common Ground is for Minecraft 26.3 on NeoForge and Fabric.
+      placeholder: 26.3.0.89
+    validations:
+      required: true
+
+  - type: textarea
+    id: mods
+    attributes:
+      label: Other mods
+      description: Your mod list, the modpack's name and version, or "none". Mods that add enchantments matter most.
+    validations:
+      required: true
+
+  - type: input
+    id: log
+    attributes:
+      label: Log
+      description: Upload `logs/latest.log` to [mclo.gs](https://mclo.gs) and paste the link.
+      placeholder: https://mclo.gs/...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I'm on the latest Common Ground release.
+          required: false
+        - label: I searched the open and closed issues for this problem.
+          required: true
