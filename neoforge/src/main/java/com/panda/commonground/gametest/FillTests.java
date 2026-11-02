@@ -119,7 +119,7 @@ final class FillTests {
     }
 
     /** Sets the biome of the test area and gives the position to read at. */
-    private static BlockPos setBiome(GameTestHelper helper, String id) {
+    static BlockPos setBiome(GameTestHelper helper, String id) {
         ServerLevel level = helper.getLevel();
         Holder<Biome> biome = level.registryAccess().lookupOrThrow(Registries.BIOME).getOrThrow(ResourceKey.create(Registries.BIOME, Identifier.parse(id)));
         BlockPos from = helper.absolutePos(BlockPos.ZERO);
@@ -127,7 +127,7 @@ final class FillTests {
         return from.offset(1, 1, 1);
     }
 
-    private static List<Weighted<SpawnerData>> mobsAt(GameTestHelper helper, BlockPos pos, MobCategory category) {
+    static List<Weighted<SpawnerData>> mobsAt(GameTestHelper helper, BlockPos pos, MobCategory category) {
         ServerLevel level = helper.getLevel();
         return level.getChunkSource().getGenerator().getMobsAt(level, level.structureManager(), category, pos).unwrap();
     }
@@ -138,7 +138,7 @@ final class FillTests {
     }
 
     /** "minecraft:wolf 5 x4": type, weight and group size, so a list compares as text. */
-    private static List<String> describe(List<Weighted<SpawnerData>> entries) {
+    static List<String> describe(List<Weighted<SpawnerData>> entries) {
         return entries.stream().map(w -> {
             int min = w.value().count().minInclusive();
             int max = w.value().count().maxInclusive();

@@ -1,6 +1,7 @@
 package com.panda.commonground.fabric;
 
 import com.panda.commonground.platform.CommonGroundPlatform;
+import java.nio.file.Path;
 import net.minecraft.core.Holder;
 import net.minecraft.world.attribute.EnvironmentAttributes;
 import net.minecraft.world.level.biome.Biome;
@@ -23,5 +24,10 @@ public final class FabricPlatform implements CommonGroundPlatform {
     public MobSpawnSettings finalSpawns(Holder<Biome> biome) {
         // Fabric API changes the biome's own map in place
         return biome.value().getAttributes().applyModifier(EnvironmentAttributes.NATURAL_MOB_SPAWNS, MobSpawnSettings.EMPTY);
+    }
+
+    @Override
+    public Path configDir() {
+        return FabricLoader.getInstance().getConfigDir();
     }
 }

@@ -45,19 +45,18 @@ final class RepairTests {
         if (!Repair.repaired().contains(PLAIN)) helper.fail("not counted as repaired: " + Repair.repaired());
 
         ModifiableBiomeInfo.BiomeInfo written = biome.value().modifiableBiomeInfo().getOriginalBiomeInfo();
-        boolean before = Repair.enabled();
         try {
             if (!has(withGoats(written, true), EntityTypes.GOAT, 6)) helper.fail("with the repair on, the added goats are dropped");
             if (has(withGoats(written, false), EntityTypes.GOAT, 6)) helper.fail("with the repair off, the goats still land");
         } finally {
-            Repair.enable(before);
+            Repair.override(null);
         }
         helper.succeed();
     }
 
     /** The biome's spawns after a biome modifier's goat spawn, as NeoForge's builder makes them. */
     private static MobSpawnSettings withGoats(ModifiableBiomeInfo.BiomeInfo written, boolean repair) {
-        Repair.enable(repair);
+        Repair.override(repair);
         var builder = ModifiableBiomeInfo.BiomeInfo.Builder.copyOf(PLAIN, written);
         builder.getMobSpawnSettings().addSpawn(EntityTypes.GOAT, MobCategory.CREATURE, 6, ConstantInt.of(2));
         return builder.build().attributes().applyModifier(EnvironmentAttributes.NATURAL_MOB_SPAWNS, MobSpawnSettings.EMPTY);

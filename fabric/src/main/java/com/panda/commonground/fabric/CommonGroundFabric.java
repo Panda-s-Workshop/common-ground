@@ -12,9 +12,6 @@ public final class CommonGroundFabric implements ModInitializer {
         CommonGround.init();
         // Fabric API's biome modifications ran when the server was made
         ServerLifecycleEvents.SERVER_STARTING.register(Ground::start);
-        ServerLifecycleEvents.END_DATA_PACK_RELOAD.register((server, resources, success) -> {
-            if (success) Ground.start(server);
-        });
         ServerLifecycleEvents.SERVER_STOPPED.register(server -> Ground.stop());
     }
 }

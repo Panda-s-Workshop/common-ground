@@ -1,1 +1,7 @@
 accessWidener	v2	official
+
+# tag kinship binds mapped biomes into their targets' tags after the registry is frozen
+accessible method net/minecraft/core/HolderSet$Named bind (Ljava/util/List;)V
+accessible method net/minecraft/core/Holder$Reference bindTags (Ljava/util/Collection;)V
+accessible field net/minecraft/core/Holder$Reference tags Ljava/util/Set;
+accessible field net/minecraft/core/HolderSet$Named contents Ljava/util/List;

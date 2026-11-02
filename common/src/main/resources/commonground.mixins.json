@@ -3,6 +3,6 @@
   "minVersion": "0.8",
   "package": "com.panda.commonground.mixin",
   "compatibilityLevel": "JAVA_21",
-  "mixins": ["EnvironmentAttributeSystemMixin"],
+  "mixins": ["EnvironmentAttributeSystemMixin", "PlayerListMixin"],
   "injectors": { "defaultRequire": 1 }
 }

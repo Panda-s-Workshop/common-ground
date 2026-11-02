@@ -1,5 +1,6 @@
 package com.panda.commonground.platform;
 
+import java.nio.file.Path;
 import net.minecraft.core.Holder;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.MobSpawnSettings;
@@ -14,4 +15,7 @@ public interface CommonGroundPlatform {
 
     /** A biome's spawn settings after every biome modifier the loader ran. */
     MobSpawnSettings finalSpawns(Holder<Biome> biome);
+
+    /** The game's config folder. */
+    Path configDir();
 }

@@ -33,6 +33,9 @@ public final class GroundGameTests {
         FUNCTIONS.register("lang_coverage", () -> GroundGameTests::langCoverage);
         FillTests.add((name, test) -> FUNCTIONS.register(name, () -> test));
         RepairTests.add((name, test) -> FUNCTIONS.register(name, () -> test));
+        ConfigTests.add((name, test) -> FUNCTIONS.register(name, () -> test));
+        TagTests.add((name, test) -> FUNCTIONS.register(name, () -> test));
+        WorldgenTests.add((name, test) -> FUNCTIONS.register(name, () -> test));
         FUNCTIONS.register("preset_applies_only_to_existing_biomes", () -> GroundGameTests::presetOnlyExisting);
     }
 

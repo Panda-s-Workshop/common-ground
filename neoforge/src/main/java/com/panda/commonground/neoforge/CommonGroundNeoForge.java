@@ -12,7 +12,6 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.AddPackFindersEvent;
-import net.neoforged.neoforge.event.OnDatapackSyncEvent;
 import net.neoforged.neoforge.event.server.ServerAboutToStartEvent;
 import net.neoforged.neoforge.event.server.ServerStoppedEvent;
 
@@ -31,10 +30,6 @@ public final class CommonGroundNeoForge {
         var game = NeoForge.EVENT_BUS;
         // the biome modifiers have run just before this
         game.addListener((ServerAboutToStartEvent e) -> Ground.start(e.getServer()));
-        // no player: this is a /reload, not a login
-        game.addListener((OnDatapackSyncEvent e) -> {
-            if (e.getPlayer() == null) Ground.start(e.getPlayerList().getServer());
-        });
         game.addListener((ServerStoppedEvent e) -> Ground.stop());
     }
 }
