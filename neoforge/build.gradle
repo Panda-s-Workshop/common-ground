@@ -10,10 +10,11 @@ architectury {
 loom {
     accessWidenerPath = project(":common").loom.accessWidenerPath
 
-    // In the dev runs common's classes and resources (data and assets) belong to the commonground mod
-    // itself, not to a library beside it: one module, no split packages.
+    // In the dev runs common's classes and resources (data and assets) belong to the mod itself, not to a library
+    // beside it: one module, no split packages. The group is named main, Loom's own name for this module: a second
+    // group would give NeoForge two copies of the mod, and it may pick the one without common's files.
     mods {
-        commonground {
+        main {
             sourceSet sourceSets.main
             sourceSet project(":common").sourceSets.main
         }
